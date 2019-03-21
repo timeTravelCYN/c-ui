@@ -1,10 +1,19 @@
 <template>
-  <button class="g-button">按钮</button>
+  <button class="g-button">
+    <svg
+      class="icon"
+      aria-hidden="true"
+    >
+      <use :xlink:href=`#i-${icon}`></use>
+    </svg>
+    <slot></slot>
+  </button>
 </template>
 
 <script>
 export default {
-  name: ""
+  name: "",
+  props: ['icon']
 };
 </script>
 
