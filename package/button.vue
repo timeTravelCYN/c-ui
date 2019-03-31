@@ -16,7 +16,17 @@
 <script>
 export default {
   name: "",
-  props: ["icon", "iconPosition"]
+  props: {
+    icon: {},
+    iconPosition: {
+      type: String,
+      default: 'left',
+      validator: value => {
+        // 防止用户传 up，bottom
+        return ['left', 'right'].includes(value)
+      }
+    }
+  }
 };
 </script>
 
