@@ -5,7 +5,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    for (let node of this.$el.children) {
+      if (node.nodeName !== 'BUTTON') {
+        console.warn(`不要写入初 c-button 外的其他元素, 你写的是 ${node.nodeName}`)
+      }
+    }
+  },
+};
 </script>
 
 <style lang="scss">
@@ -13,7 +21,9 @@ export default {};
   vertical-align: top;
   display: inline-flex;
   > .c-button {
-    margin-left: -1px;
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
     border-radius: 0;
     &:first-child {
       border-top-left-radius: var(--border-radius);
