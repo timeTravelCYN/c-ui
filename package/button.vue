@@ -1,7 +1,7 @@
 <template>
-  <button class="g-button" :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
-    <g-icon class="icon" v-if="icon && !loading" :name="icon"></g-icon>
-    <g-icon class="icon loading" v-if="loading" name="loading"></g-icon>
+  <button class="c-button" :class="{[`icon-${iconPosition}`]: true}" @click="$emit('click')">
+    <c-icon class="icon" v-if="icon && !loading" :name="icon"></c-icon>
+    <c-icon class="icon loading" v-if="loading" name="loading"></c-icon>
     <div class="content">
     <slot></slot>
     </div>
@@ -37,7 +37,7 @@ export default {
 .loading {
   animation: spin 2s infinite linear;
 }
-.g-button {
+.c-button {
   justify-content: center;
   align-items: center;
   display: inline-flex;

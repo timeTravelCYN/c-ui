@@ -40,20 +40,23 @@
 
 <body>
   <div id="app">
-    <g-button :loading="loading1" icon="setting" @click.native="loading1 = !loading1">
+    <c-button :loading="loading1" icon="setting" @click.native="loading1 = !loading1">
       按钮
-    </g-button>
-    <g-button icon="appreciate" icon-position="right">
+    </c-button>
+    <c-button icon="appreciate" icon-position="right">
       我爱js
-    </g-button>
-    <g-button-group>
-      <g-button icon="back" icon-position="left">
+    </c-button>
+    <c-button-group>
+      <c-button icon="back" icon-position="left">
         上一页
-      </g-button>
-      <g-button icon="right" icon-position="right">
+      </c-button>
+      <c-button>
+        更多
+      </c-button>
+      <c-button icon="right" icon-position="right">
         下一页
-      </g-button>
-    </g-button-group>
+      </c-button>
+    </c-button-group>
   </div>
   <script src="./src/app.js"></script>
   <script src="//at.alicdn.com/t/font_1101883_mafmyas3juf.js"></script>
